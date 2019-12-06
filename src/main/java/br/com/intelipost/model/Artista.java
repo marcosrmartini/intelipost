@@ -20,6 +20,7 @@ public class Artista implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@NotBlank(message = "{artista.nome.not.blank}")
 	private String nome;
 
 	@OneToMany
