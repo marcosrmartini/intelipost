@@ -18,7 +18,8 @@ public class ErrorDetails {
 		String sa = msg.substring(msg.indexOf("default message ["));
 		sa = sa.replaceAll("default message", "");
 		sa = sa.replaceAll("]]", "]");
-		return sa;
+		sa = sa.replaceAll(";", " -");
+		return sa.trim();
 	}
 
 	public Date getTimestamp() {
